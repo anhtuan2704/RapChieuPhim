@@ -17,7 +17,8 @@ namespace QLRCP.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", Controller = "Movies", id = UrlParameter.Optional }
+                new { action = "Index", Controller = "Movies", id = UrlParameter.Optional },
+                  new[] { "QLRCP.Areas.Admin.Controllers" }
             );
         }
     }

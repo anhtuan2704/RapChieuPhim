@@ -29,7 +29,7 @@
     <div>
 
 
-
+     
         <header id="header">
             <!--header-->
             <div class="header_top">
@@ -48,11 +48,22 @@
                         <div class="col-sm-6">
                             <div class="social-icons pull-right">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+
+                                    @using Microsoft.AspNet.Identity
+                                    @if (Request.IsAuthenticated)
+                                    {
+                                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                                        {
+                                            @Html.AntiForgeryToken()
+
+                                            <ul class="nav navbar-nav navbar-right">
+                                                <li>
+                                                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                                                </li>
+                                                <li><a href="javascript:document.getElementById('logoutForm').submit()">Đăng Xuất</a></li>
+                                            </ul>
+                                        }
+                                    }
                                 </ul>
                             </div>
                         </div>
@@ -73,10 +84,10 @@
                         <div class="col-md-8 clearfix">
                             <div class="shop-menu clearfix pull-right">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="login.html"><i class="fa fa-lock"></i> ĐĂNG NHẬP/ ĐĂNG KÝ</a></li>
-                                    <!-- <li><a href=""><i class="fa fa-user"></i> TÀI KHOẢN</a></li> -->
-                                    <li><a href=""><i class="fa fa-star"></i> TIN MỚI & ƯU ĐÃI</a></li>
-                                    <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> TUYỂN DỤNG</a></li>
+                                    <li><a href="@Url.Action("Login","Account")"><i class="fa fa-lock"></i> ĐĂNG NHẬP</a></li>
+                                    <li><a href="@Url.Action("Register","Account")"><i class="fa fa-lock"></i> ĐĂNG KÝ</a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i> TIN MỚI & ƯU ĐÃI</a></li>
+                                    @*<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> TUYỂN DỤNG</a></li>*@
                                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Vé Của Tôi</a></li>
 
                                 </ul>
@@ -101,11 +112,11 @@
                             </div>
                             <div class="mainmenu pull-left">
                                 <ul class="nav navbar-nav collapse navbar-collapse">
-                                    <li><a href="index.html" class="active">Home</a></li>
+                                    <li><a href="@Url.Action("Index","Home")" class="active">Home</a></li>
                                     <li class="dropdown">
                                         <a href="#">Rạp Phim<i class="fa fa-angle-down"></i></a>
                                         <ul role="menu" class="sub-menu">
-                                            <li><a href="#">Tất Cả Các Rạp</a></li>
+                                            <li><a href="@Url.Action("Index","Cinemas")">Tất Cả Các Rạp</a></li>
                                             <li><a href="#">Rạp Sắp Mở</a></li>
                                             <li><a href="#">Rạp Đặt Biệt</a></li>
                                         </ul>
@@ -113,8 +124,8 @@
                                     <li class="dropdown">
                                         <a href="#">Phim<i class="fa fa-angle-down"></i></a>
                                         <ul role="menu" class="sub-menu">
-                                            <li><a href="#">Phim Đang Chiếu</a></li>
-                                            <li><a href="#">Phim Sắp Chiếu</a></li>
+                                            <li><a href="@Url.Action("Index","ShowDays")">Phim Đang Chiếu</a></li>
+                                            <li><a href="@Url.Action("Index","Shows")">Phim Sắp Chiếu</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="404.html">404</a></li>
@@ -150,7 +161,7 @@
                                 <div class="item active">
 
                                     <div class="col-sm-6">
-                                        
+
                                         <img src="~/images/home/banner1.jpg" class="girl img-responsive" alt="" />
 
                                     </div>

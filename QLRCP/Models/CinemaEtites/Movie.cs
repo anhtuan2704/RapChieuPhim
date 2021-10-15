@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,6 +9,7 @@ namespace QLRCP.Models.CinemaEtites
     public class Movie
     {
         public int Id { get; set; }
+        [Display(Name = "Tên Phim")]
         public String Name { get; set; }
         public String Discription { get; set; }
         public String Image { get; set; }

@@ -1,0 +1,51 @@
+﻿@model QLRCP.Models.CinemaEtites.Show
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Show</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cinema.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cinema.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Movie.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Movie.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowDay.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowDay.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowTime.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowTime.Id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

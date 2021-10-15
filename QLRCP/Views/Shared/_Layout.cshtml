@@ -1,8 +1,11 @@
-﻿
-<!DOCTYPE html>
-
+﻿<!DOCTYPE html>
 <html>
 <head>
+    @*<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <meta charset="utf-8">
@@ -24,117 +27,36 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="~/images/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="https://www.cgv.vn/media/favicon/default/cgvcinemas-vietnam-favicon.ico" type="images/x-icon">
+
 </head>
 <body>
-    <div>
-
-
-        
-        <header id="header">
-            <!--header-->
-            <div class="header_top">
-                <!--header_top-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="contactinfo">
-                                <ul class="nav nav-pills">
-                                    <li><a href="#"><i class="fa fa-phone"></i> Hotline: 0988888888</a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i> Email: SuperCGV.COM</a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="social-icons pull-right">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/header_top-->
-
-            <div class="header-middle">
-                <!--header-middle-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 clearfix">
-                            <div class="logo pull-left">
-                                <a href="index.html"><img src="~/images/home/cgvlogo.png" alt="" /></a>
-                            </div>
-
-                        </div>
-                        <div class="col-md-8 clearfix">
-                            <div class="shop-menu clearfix pull-right">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="login.html"><i class="fa fa-lock"></i> ĐĂNG NHẬP/ ĐĂNG KÝ</a></li>
-                                    <!-- <li><a href=""><i class="fa fa-user"></i> TÀI KHOẢN</a></li> -->
-                                    <li><a href=""><i class="fa fa-star"></i> TIN MỚI & ƯU ĐÃI</a></li>
-                                    <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> TUYỂN DỤNG</a></li>
-                                    <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Vé Của Tôi</a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/header-middle-->
-
-            <div class="header-bottom">
-                <!--header-bottom-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-9">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="mainmenu pull-left">
-                                <ul class="nav navbar-nav collapse navbar-collapse">
-                                    <li><a href="index.html" class="active">Home</a></li>
-                                    <li class="dropdown">
-                                        <a href="#">Rạp Phim<i class="fa fa-angle-down"></i></a>
-                                        <ul role="menu" class="sub-menu">
-                                            <li><a href="#">Tất Cả Các Rạp</a></li>
-                                            <li><a href="#">Rạp Sắp Mở</a></li>
-                                            <li><a href="#">Rạp Đặt Biệt</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#">Phim<i class="fa fa-angle-down"></i></a>
-                                        <ul role="menu" class="sub-menu">
-                                            <li><a href="#">Phim Đang Chiếu</a></li>
-                                            <li><a href="#">Phim Sắp Chiếu</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="404.html">404</a></li>
-                                    <li class="dropdown">
-                                        <a href="#">Thành Viên<i class="fa fa-angle-down"></i></a>
-                                        <ul role="menu" class="sub-menu">
-                                            <li><a href="#">Tài Khoàn S-CGV</a></li>
-                                            <li><a href="#">Quyển Lợi</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div><!--/header-bottom-->
-        </header><!--/header-->
-        <div> @RenderBody() </div>
-
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Trang Chủ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Movie", "Index", "Movies")</li>
+                    <li>@Html.ActionLink("Cinema", "Index", "Cinemas")</li>
+                    <li>@Html.ActionLink("ShowDay", "Index", "ShowDays")</li>
+                    <li>@Html.ActionLink("ShowTime", "Index", "ShowTimes")</li>
+                    <li>@Html.ActionLink("Show", "Index", "Shows")</li>
+                    <li>@Html.ActionLink("Seat", "Index", "Seats")</li>
+                    <li>@Html.ActionLink("Reservation", "Index", "Reservations")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
         <foote id="footer">
             <!--Footer-->
             <div class="footer-top">
@@ -294,13 +216,14 @@
 
             </footer><!--/Footer-->
     </div>
-
-
     @*<script src="js/jquery.js"></script>*@
     <script src="~/Scripts/bootstrap.min.js"></script>
     @*<script src="~/Scripts/jquery.scrollUp.min.js"></script>*@
     <script src="~/Scripts/price-range.js"></script>
     @*<script src="~/Scripts/jquery.prettyPhoto.js"></script>*@
     <script src="~/Scripts/main.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>

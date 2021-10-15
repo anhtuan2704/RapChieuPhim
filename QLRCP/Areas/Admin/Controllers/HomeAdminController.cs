@@ -9,6 +9,7 @@ namespace QLRCP.Areas.Admin.Controllers
     public class HomeAdminController : Controller
     {
         // GET: Admin/HomeAdmin
+        [Authorize]
         public ActionResult Index()
         {
             return View();

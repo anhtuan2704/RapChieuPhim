@@ -11,6 +11,7 @@ using QLRCP.Models.CinemaEtites;
 
 namespace QLRCP.Areas.Admin.Controllers
 {
+    [Authorize]
     public class MoviesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

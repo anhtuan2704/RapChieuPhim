@@ -10,7 +10,7 @@ namespace QLRCP.Models.CinemaEtites
     {
         [Key]
         public int Id { get; set; }
-
+        [Display(Name = "Số ghế")]
         public int SeatNo { get; set; }
         public bool Status { get; set; }
         public double Price { get; set; }

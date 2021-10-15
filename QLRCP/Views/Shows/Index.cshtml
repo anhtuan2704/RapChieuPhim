@@ -17,10 +17,10 @@
             @Html.DisplayNameFor(model => model.Movie.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ShowDay.Day)
+            @Html.DisplayNameFor(model => model.ShowDay.Id)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ShowTime.Time)
+            @Html.DisplayNameFor(model => model.ShowTime.Id)
         </th>
         <th></th>
     </tr>
@@ -34,12 +34,15 @@
             @Html.DisplayFor(modelItem => item.Movie.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ShowDay.Day)
+            @Html.DisplayFor(modelItem => item.ShowDay.Id)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ShowTime.Time)
+            @Html.DisplayFor(modelItem => item.ShowTime.Id)
         </td>
-      
+        <td>
+           
+            @Html.ActionLink("Details", "Details", new { id=item.ID })      
+        </td>
     </tr>
 }
 

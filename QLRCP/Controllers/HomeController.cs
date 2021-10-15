@@ -18,5 +18,7 @@ namespace QLRCP.Controllers
         {
             return View(db.Movies.ToList());
         }
+
+      
     }   
 }

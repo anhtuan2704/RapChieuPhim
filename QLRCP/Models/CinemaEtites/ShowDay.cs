@@ -10,7 +10,7 @@ namespace QLRCP.Models.CinemaEtites
     {
         [Key]
         public int Id { get; set; }
-
+        [Display(Name = "Ngày chiếu")]
         public DateTime Day  { get; set; }
         public ICollection<Show> Shows { get; set; }
     }
