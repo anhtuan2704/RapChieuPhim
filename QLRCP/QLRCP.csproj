@@ -214,6 +214,14 @@
     <Compile Include="Migrations\202110110741473_ApplyCinemaShowDayShowTimeMovieSeat.Designer.cs">
       <DependentUpon>202110110741473_ApplyCinemaShowDayShowTimeMovieSeat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110311332236_AddColumNameToIdentity1.cs" />
+    <Compile Include="Migrations\202110311332236_AddColumNameToIdentity1.Designer.cs">
+      <DependentUpon>202110311332236_AddColumNameToIdentity1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110311337432_deleteColumToIndentity.cs" />
+    <Compile Include="Migrations\202110311337432_deleteColumToIndentity.Designer.cs">
+      <DependentUpon>202110311337432_deleteColumToIndentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CinemaEtites\Cinema.cs" />
@@ -412,6 +420,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110110741473_ApplyCinemaShowDayShowTimeMovieSeat.resx">
       <DependentUpon>202110110741473_ApplyCinemaShowDayShowTimeMovieSeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110311332236_AddColumNameToIdentity1.resx">
+      <DependentUpon>202110311332236_AddColumNameToIdentity1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110311337432_deleteColumToIndentity.resx">
+      <DependentUpon>202110311337432_deleteColumToIndentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

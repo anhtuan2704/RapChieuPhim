@@ -6,7 +6,9 @@
 }
 
 <h2>Index</h2>
-
+<p>
+@Html.ActionLink("Create New", "Create")
+</p>
 
 <table class="table">
     <tr>
@@ -33,32 +35,33 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Customer.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Seat.SeatNo)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Show.Cinema.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Show.Movie.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Show.ShowDay.Day)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Show.ShowTime.Time)
-    </td>
-    <td>
-        
-        @Html.ActionLink("Details", "Details", new { id = item.Id }) 
-       
-    </td>
-</tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Seat.SeatNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Show.Cinema.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Show.Movie.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Show.ShowDay.Day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Show.ShowTime.Time)
+            </td>
+            <td>
+
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+
+            </td>
+        </tr>
+    }
 
 </table>

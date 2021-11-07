@@ -215,7 +215,6 @@ F:\RapChieuPhim\QLRCP\bin\Microsoft.Owin.Security.Twitter.xml
 F:\RapChieuPhim\QLRCP\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 F:\RapChieuPhim\QLRCP\bin\Microsoft.Owin.Security.OAuth.xml
 F:\RapChieuPhim\QLRCP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.csproj.AssemblyReference.cache
 F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.Migrations.ApplyIdentityTableToAuthentication.resources
 F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.Migrations.AddColumNameToIdentity.resources
 F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.Migrations.ApplyASPNETUSER_Reservation.resources
@@ -227,3 +226,6 @@ F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.csproj.CoreCompileInputs.cache
 F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.csproj.CopyComplete
 F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.dll
 F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.pdb
+F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.Migrations.AddColumNameToIdentity1.resources
+F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.csproj.AssemblyReference.cache
+F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.Migrations.deleteColumToIndentity.resources
