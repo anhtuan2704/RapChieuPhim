@@ -227,5 +227,8 @@ F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.csproj.CopyComplete
 F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.dll
 F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.pdb
 F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.Migrations.AddColumNameToIdentity1.resources
-F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.csproj.AssemblyReference.cache
 F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.Migrations.deleteColumToIndentity.resources
+F:\RapChieuPhim\QLRCP\bin\PagedList.dll
+F:\RapChieuPhim\QLRCP\bin\PagedList.Mvc.dll
+F:\RapChieuPhim\QLRCP\bin\PagedList.xml
+F:\RapChieuPhim\QLRCP\bin\PagedList.Mvc.xml

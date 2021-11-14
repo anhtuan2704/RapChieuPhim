@@ -1,4 +1,7 @@
-﻿@model IEnumerable<QLRCP.Models.CinemaEtites.Movie>
+﻿@using PagedList;
+@using PagedList.Mvc;
+@*@model IEnumerable<QLRCP.Models.CinemaEtites.Movie>*@
+@model PagedList.PagedList<QLRCP.Models.CinemaEtites.Movie>
 
 @{
     ViewBag.Title = "Index";
@@ -13,35 +16,49 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            Tên
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Discription)
+           Mô tả
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Image)
+            Hình ảnh
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Discription)
-    </td>
-    
-    <td>
-        <img src="~/images/Film/@item.Image" width="100" />
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-    </td>
-</tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discription)
+            </td>
+
+            <td>
+                <img src="~/images/Film/@item.Image" width="100" />
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
 
 </table>
+@*tạo liên kết các trang*@
+@*Trang @Model.PageCount Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount ;*@
+
+<div class="MenuTrang">
+   
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>

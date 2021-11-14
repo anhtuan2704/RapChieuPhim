@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using QLRCP.Models;
 using QLRCP.Models.CinemaEtites;
+using PagedList;
+using PagedList.Mvc;
 
 namespace QLRCP.Areas.Admin.Controllers
 {
@@ -17,9 +19,12 @@ namespace QLRCP.Areas.Admin.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Admin/Movies
-        public ActionResult Index()
+        public ActionResult Index(int ? page)
         {
-            return View(db.Movies.ToList());
+            int pageSize = 3;
+            int pageNum = (page ?? 1);
+            return View(db.Movies.OrderBy(p => p.Id).ToPagedList(pageNum, pageSize));
+            //return View(db.Movies.ToList());
         }
 
         // GET: Admin/Movies/Details/5
