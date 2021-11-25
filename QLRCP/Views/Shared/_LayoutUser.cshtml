@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | S-CGV</title>
+    <title>Home | S-CGV</title>   
     @*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="~/Content/font-awesome.min.css" rel="stylesheet">
@@ -203,7 +203,261 @@
                 </div>
             </div>
         </section><!--/slider-->
-      
+        <!-- Move slection-->
+        <div class="selection">
+            <img src="~/images/home/h3_movie_selection.gif" />
+        </div>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            ul.phims {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+                ul.phims li {
+                    padding-left: 20px;
+                    padding-right: 10px;
+                    flex-basis: 20%;
+                    box-sizing: border-box;
+                    margin-bottom: 30px;
+                    margin-top: 30px
+                }
+
+                    ul.phims li img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+
+                    ul.phims li .phim-info a {
+                        display: block;
+                    }
+                    ul.phims li .phim-top{
+                        position:relative;
+                        overflow:hidden;
+                    }
+                    ul.phims li .phim-top .phim-thumb {
+                        display: block;
+                    }
+                        ul.phims li:hover .phim-top .phim-thumb img{
+                            filter:opacity(80%);
+                        }
+                        ul.phims li .phim-top .phim-thumb img {
+                            display: block;
+                        }
+                        ul.phims li .phim-top a.buy-now {
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            text-align: center;
+                            display: block;
+                            background-color: #ebf804;
+                            padding: 10px 0px;
+                            color: red;
+                            position: absolute;
+                            width: 100%;
+                            bottom: -40px;
+                            transition:0.25s ease-in-out;
+                            opacity: 0.85;
+                        }
+                    ul.phims li:hover a.buy-now {
+                        bottom: 0px;
+                    }
+                        ul.phims li .phim-info a.phim-cat {
+                            font-size: 20px;
+                            padding: 3px 0px
+                        }
+
+                        ul.phims li .phim-info a.phim-mota {
+                            padding: 3px 0px;
+                        }
+
+                    ul.phims li .phim-info .phim-gia {
+                        color: #111;
+                        padding: 2px 0px;
+                        font-weight: 600;
+                    }
+        </style>
+        <ul class="phims">
+            <li>
+                <div class="phim">
+                    <div class="phim-top">
+                        <a href="" class="phim-thumb">
+                            <img src="~/images/Film/latmat.jpg" alt="" />
+                        </a>
+                        <!--Mua Ngay-->
+                        <a href="" class="buy-now"> Đặt vé </a>
+                    </div>
+                    <div class="phim-info">
+                        <a href="" class="phim-cat">Lật Mặt</a>
+                        <a href="" class="phim-mota"> Lý Hải</a>
+                        <div class="phim-gia"> 79k</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="phim">
+                    <div class="phim-top">
+                        <a href="" class="phim-thumb">
+                            <img src="~/images/Film/advenger.jpg" alt="" />
+                        </a>
+                        <!--Mua Ngay-->
+                        <a href="" class="buy-now"> Đặt vé </a>
+                    </div>
+                    <div class="phim-info">
+                        <a href="" class="phim-cat">Biệt Đội Siêu Anh Hùng</a>
+                        <a href="" class="phim-mota"> Advenger </a>
+                        <div class="phim-gia"> 79k</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="phim">
+                    <div class="phim-top">
+                        <a href="" class="phim-thumb">
+                            <img src="~/images/Film/bogi.jpg" alt="" />
+                        </a>
+                        <!--Mua Ngay-->
+                        <a href="" class="buy-now"> Đặt vé </a>
+                    </div>
+                    <div class="phim-info">
+                        <a href="" class="phim-cat">Bố Già</a>
+                        <a href="" class="phim-mota">Trấn Thành</a>
+                        <div class="phim-gia"> 79k</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="phim">
+                    <div class="phim-top">
+                        <a href="" class="phim-thumb">
+                            <img src="~/images/Film/diepvu.jpg" alt="" />
+                        </a>
+                        <!--Mua Ngay-->
+                        <a href="" class="buy-now"> Đặt vé </a>
+                    </div>
+                    <div class="phim-info">
+                        <a href="" class="phim-cat">
+                            SUICIDE SQUAD: ĐIỆP VỤ CẢM TỬ
+                        </a>
+                        <a href="" class="phim-mota">Updating...</a>
+                        <div class="phim-gia"> 79k</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="phim">
+                    <div class="phim-top">
+                        <a href="" class="phim-thumb">
+                            <img src="~/images/Film/ngongvit.jpg" alt="" />
+                        </a>
+                        <!--Mua Ngay-->
+                        <a href="" class="buy-now"> Đặt vé </a>
+                    </div>
+                    <div class="phim-info">
+                        <a href="" class="phim-cat">Ngỗng Vịt</a>
+                        <a href="" class="phim-mota">Updating...</a>
+                        <div class="phim-gia"> 79k</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="phim">
+                    <div class="phim-top">
+                        <a href="" class="phim-thumb">
+                            <img src="~/images/Film/hungthantrang.jpg" alt="" />
+                        </a>
+                        <!--Mua Ngay-->
+                        <a href="" class="buy-now"> Đặt vé </a>
+                    </div>
+                    <div class="phim-info">
+                        <a href="" class="phim-cat">HUNG THẦN TRẮNG</a>
+                        <a href="" class="phim-mota">Updating...</a>
+                        <div class="phim-gia"> 79k</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="phim">
+                    <div class="phim-top">
+                        <a href="" class="phim-thumb">
+                            <img src="~/images/Film/hienthan.jpg" alt="" />
+                        </a>
+                        <!--Mua Ngay-->
+                        <a href="" class="buy-now"> Đặt vé </a>
+                    </div>
+                    <div class="phim-info">
+                        <a href="" class="phim-cat">Hiện Thân Tà Ác</a>
+                        <a href="" class="phim-mota">Updating...</a>
+                        <div class="phim-gia"> 79k</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="phim">
+                    <div class="phim-top">
+                        <a href="" class="phim-thumb">
+                            <img src="~/images/Film/kenguyentachet.jpg" alt="" />
+                        </a>
+                        <!--Mua Ngay-->
+                        <a href="" class="buy-now"> Đặt vé </a>
+                    </div>
+                    <div class="phim-info">
+                        <a href="" class="phim-cat">Kẻ Nguyền Ta Chết</a>
+                        <a href="" class="phim-mota">Updating...</a>
+                        <div class="phim-gia"> 79k</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="phim">
+                    <div class="phim-top">
+                        <a href="" class="phim-thumb">
+                            <img src="~/images/Film/tocsannguoi.jpg" alt="" />
+                        </a>
+                        <!--Mua Ngay-->
+                        <a href="" class="buy-now"> Đặt vé </a>
+                    </div>
+                    <div class="phim-info">
+                        <a href="" class="phim-cat">Tộc Săn Người </a>
+                        <a href="" class="phim-mota">Updating...</a>
+                        <div class="phim-gia"> 79k</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="phim">
+                    <div class="phim-top">
+                        <a href="" class="phim-thumb">
+                            <img src="~/images/Film/maxui.jpg" alt="" />
+                        </a>
+                        <!--Mua Ngay-->
+                        <a href="" class="buy-now"> Đặt vé </a>
+                    </div>
+                    <div class="phim-info">
+                        <a href="" class="phim-cat">THE CONJURING: MA XUI QUỶ KHIẾN</a>
+                        <a href="" class="phim-mota">Updating</a>
+                        <div class="phim-gia"> 79k</div>
+                    </div>
+                </div>
+            </li>
+
+
+
+        </ul>
+        <!-- end move selection-->
+
+
+        <div class="home-title">
+
+            <img src="~/images/home/h3_event.gif" />
+        </div>
+
+
+
         <div> @RenderBody() </div>
 
         <foote id="footer">
@@ -366,12 +620,15 @@
             </footer><!--/Footer-->
     </div>
 
-
-    @*<script src="js/jquery.js"></script>*@
+   
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery.js"></script>  
     <script src="~/Scripts/bootstrap.min.js"></script>
-    @*<script src="~/Scripts/jquery.scrollUp.min.js"></script>*@
+    <script src="~/Scripts/jquery.scrollUp.min.js"></script>
     <script src="~/Scripts/price-range.js"></script>
-    @*<script src="~/Scripts/jquery.prettyPhoto.js"></script>*@
+    <script src="~/Scripts/jquery.prettyPhoto.js"></script>
     <script src="~/Scripts/main.js"></script>
+   
+ 
 </body>
 </html>

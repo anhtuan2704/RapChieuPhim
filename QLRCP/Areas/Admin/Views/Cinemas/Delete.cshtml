@@ -1,13 +1,13 @@
 ﻿@model QLRCP.Models.CinemaEtites.Cinema
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Xoá Rạp Phim";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>Xoá Rạp Phim</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Bạn có chắc xoá nó không?</h3>
 <div>
     <h4>Cinema</h4>
     <hr />
@@ -34,8 +34,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Xoá" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
         </div>
     }
 </div>

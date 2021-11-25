@@ -4,19 +4,19 @@
 @model PagedList.PagedList<QLRCP.Models.CinemaEtites.Movie>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Phim";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Tất Cả Các Phim</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm phim mới", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            Tên
+            Tên Phim
         </th>
         <th>
            Mô tả
@@ -41,9 +41,9 @@
                 <img src="~/images/Film/@item.Image" width="100" />
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Xoá", "Delete", new { id = item.Id })
             </td>
         </tr>
     }

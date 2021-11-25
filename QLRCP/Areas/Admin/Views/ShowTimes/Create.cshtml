@@ -19,7 +19,16 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Time, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.DropDownListFor(model => model.Time, new List<SelectListItem>
+                     {
+                        new SelectListItem() {Text = "18:00", Value="18:00"},
+                        new SelectListItem() {Text = "18:30", Value="18:30"},
+                        new SelectListItem() {Text = "19:00", Value="19:00"},
+                        new SelectListItem() {Text = "19:30", Value="19:30"},
+                        new SelectListItem() {Text = "21:00", Value="21:00"}
+                         }, new { @class = "form-control" })
+
                 @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
             </div>
         </div>

@@ -232,3 +232,11 @@ F:\RapChieuPhim\QLRCP\bin\PagedList.dll
 F:\RapChieuPhim\QLRCP\bin\PagedList.Mvc.dll
 F:\RapChieuPhim\QLRCP\bin\PagedList.xml
 F:\RapChieuPhim\QLRCP\bin\PagedList.Mvc.xml
+F:\RapChieuPhim\QLRCP\bin\System.Net.Http.Formatting.dll
+F:\RapChieuPhim\QLRCP\bin\System.Web.Http.dll
+F:\RapChieuPhim\QLRCP\bin\System.Web.Http.WebHost.dll
+F:\RapChieuPhim\QLRCP\bin\System.Net.Http.Formatting.xml
+F:\RapChieuPhim\QLRCP\bin\System.Web.Http.xml
+F:\RapChieuPhim\QLRCP\bin\System.Web.Http.WebHost.xml
+F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.csproj.AssemblyReference.cache
+F:\RapChieuPhim\QLRCP\obj\Debug\QLRCP.Migrations.editcolum.resources

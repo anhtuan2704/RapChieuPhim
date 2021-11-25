@@ -5,6 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
+
 body {
     font-family: 'Roboto', sans-serif;
     position: relative;
@@ -91,6 +92,9 @@ img {
     border-style: none;
 }
 img {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
     vertical-align: middle;
     border-style: none;
 }
@@ -310,7 +314,7 @@ ul.sub-menu {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 1000px;
+    width: max-content;
     -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
     display: none;

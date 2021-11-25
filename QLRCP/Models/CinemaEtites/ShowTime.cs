@@ -11,7 +11,8 @@ namespace QLRCP.Models.CinemaEtites
         [Key]
         public int Id { get; set; }
         [Display(Name = "Giờ chiếu")]
-        public DateTime Time { get; set; }
+        [Required(ErrorMessage ="Thời gian bắt buộc nhập!")]
+        public String Time { get; set; }
         public ICollection<Show> Shows { get; set; }
     }
 }

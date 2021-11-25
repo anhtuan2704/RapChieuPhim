@@ -102,7 +102,7 @@ namespace QLRCP.Areas.Admin.Controllers
             }
             ViewBag.CinemaID = new SelectList(db.Cinemas, "Id", "Name", show.CinemaID);
             ViewBag.MovieID = new SelectList(db.Movies, "Id", "Name", show.MovieID);
-            ViewBag.ShowDayID = new SelectList(db.ShowDays, "Id", "Id", show.ShowDayID);
+            ViewBag.ShowDayID = new SelectList(db.ShowDays, "Id", "Day", show.ShowDayID);
             ViewBag.ShowTimeId = new SelectList(db.ShowTimes, "Id", "Id", show.ShowTimeId);
             return View(show);
         }
